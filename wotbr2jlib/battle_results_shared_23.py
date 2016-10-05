@@ -1,7 +1,27 @@
 # Embedded file name: scripts/common/battle_results_shared.py
 import struct
 from itertools import izip
-from dictpackers_21 import *
+from dictpackers_23 import *
+
+class FLAG_ACTION:
+    PICKED_UP_FROM_BASE = 0
+    PICKED_UP_FROM_GROUND = 1
+    CAPTURED = 2
+    RANGE = (PICKED_UP_FROM_BASE, PICKED_UP_FROM_GROUND, CAPTURED)
+	
+VEHICLE_DEVICE_TYPE_NAMES = ('engine',
+ 'ammoBay',
+ 'fuelTank',
+ 'radio',
+ 'track',
+ 'gun',
+ 'turretRotator',
+ 'surveyingDevice')
+VEHICLE_TANKMAN_TYPE_NAMES = ('commander',
+ 'driver',
+ 'radioman',
+ 'gunner',
+ 'loader')
 
 VEH_INTERACTION_DETAILS = (('spotted', 'B', 1, 0),
  ('deathReason', 'b', 10, -1),
