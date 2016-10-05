@@ -1,9 +1,8 @@
 # Embedded file name: scripts/common/battle_results_shared.py
 import struct
 from itertools import izip
-from items.vehicles import VEHICLE_DEVICE_TYPE_NAMES, VEHICLE_TANKMAN_TYPE_NAMES
-from constants import FLAG_ACTION
-from DictPackers import Meta, DictPacker, SimpleDictPacker, DeltaPacker, ValueReplayPacker, BunchProxyPacker, roundToInt
+from dictpackers_21 import *
+
 VEH_INTERACTION_DETAILS = (('spotted', 'B', 1, 0),
  ('deathReason', 'b', 10, -1),
  ('directHits', 'H', 65535, 0),
