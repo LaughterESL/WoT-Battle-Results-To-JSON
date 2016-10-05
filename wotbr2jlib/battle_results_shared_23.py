@@ -1,7 +1,7 @@
 # Embedded file name: scripts/common/battle_results_shared.py
 import struct
 from itertools import izip
-from dictpackers_21 import *
+from dictpackers_22 import *
 
 VEH_INTERACTION_DETAILS = (('spotted', 'B', 1, 0),
  ('deathReason', 'b', 10, -1),
