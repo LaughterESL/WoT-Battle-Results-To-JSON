@@ -48,7 +48,7 @@ VEH_INTERACTION_DETAILS_INDICES = dict(((x[1][0], x[0]) for x in enumerate(VEH_I
   
   
 parser = dict()
-parser['version'] = "0.9.15.2"
+parser['version'] = "0.9.16"
 parser['name'] = 'http://www.vbaddict.net'
 parser['processingTime'] = int(time.mktime(time.localtime()))
   
@@ -120,7 +120,7 @@ def process(file):
         # parser['battleResultVersion'] = LEGACY_VERSIONS[len(battleResults[1])]
     # else:
     # Updates higher than v0.9.8 have to be identified using a list of new fields
-    parser['battleResultVersion'] = 19
+    parser['battleResultVersion'] = 20
 
     while parser['battleResultVersion']>0:
         logging.info("Processing Version: " + str(parser['battleResultVersion']))
@@ -305,7 +305,7 @@ def convertToFullForm(compactForm, battleResultVersion):
             except Exception, e:
                 exitwitherror("Error occured while transforming Battle Result Version: " + str(battleResultVersion) + " Error: " + str(e))
 
-        if battleResultVersion >= 17:
+        if battleResultVersion >= 19:
 
             arenaUniqueID, avatarResults, fullResultsList, pickled = compactForm
             fullResultsList = SafeUnpickler.loads(zlib.decompress(fullResultsList))
