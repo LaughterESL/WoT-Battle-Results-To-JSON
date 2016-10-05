@@ -120,7 +120,7 @@ def process(file):
         # parser['battleResultVersion'] = LEGACY_VERSIONS[len(battleResults[1])]
     # else:
     # Updates higher than v0.9.8 have to be identified using a list of new fields
-    parser['battleResultVersion'] = 20
+    parser['battleResultVersion'] = 23
 
     while parser['battleResultVersion']>0:
         logging.info("Processing Version: " + str(parser['battleResultVersion']))
